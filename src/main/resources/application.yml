@@ -1,0 +1,14 @@
+server:
+  port: 8888
+spring:
+  rabbitmq:
+    host: 192.168.186.26
+    virtual-host: delay_queue
+    port: 5672
+    username: guest
+    password: guest
+    listener:
+      type: simple
+      simple: 
+        default-requeue-rejected: false
+        acknowledge-mode: manual
